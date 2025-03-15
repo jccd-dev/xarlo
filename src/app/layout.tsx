@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Container from '@/components/Container';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const uncage = localFont({
   src: '../../public/fonts/uncage.woff',
@@ -33,7 +34,7 @@ export default function RootLayout({
             {[...Array(12)].map((_, i) => (
               <div
                 key={i}
-                className='bg-westar-200 border-l border-gray-300 last:border-r'
+                className='border-l border-gray-300 bg-westar-200 last:border-r'
               />
             ))}
           </div>
@@ -41,6 +42,9 @@ export default function RootLayout({
           <Navigation />
           {/* Page Content */}
           <div className='relative z-10'>{children}</div>
+
+          {/* Footer */}
+          <Footer />
         </div>
       </body>
     </html>

@@ -27,6 +27,7 @@ export default {
       fontFamily: {
         uncage: 'var(--font-uncage)',
         anomaly: 'var(--font-anomaly)',
+        funnel: 'var(--font-funnel)',
       },
     },
   },

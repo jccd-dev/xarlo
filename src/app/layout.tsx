@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import Container from '@/components/Container';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -13,6 +12,11 @@ const uncage = localFont({
 const anomaly = localFont({
   src: '../../public/fonts/anomaly.woff',
   variable: '--font-anomaly',
+});
+
+const funneldisplay = localFont({
+  src: '../../public/fonts/funnel-display.woff2',
+  variable: '--font-funnel',
 });
 
 export const metadata: Metadata = {
@@ -27,8 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${uncage.variable} ${anomaly.variable}`}>
-        <div className='relative min-h-screen'>
+      <body
+        className={`${uncage.variable} ${anomaly.variable} ${funneldisplay.variable}`}
+      >
+        <div className='relative'>
           {/* Column Background */}
           <div className='absolute inset-0 grid grid-cols-12'>
             {[...Array(12)].map((_, i) => (
@@ -42,7 +48,6 @@ export default function RootLayout({
           <Navigation />
           {/* Page Content */}
           <div className='relative z-10'>{children}</div>
-
           {/* Footer */}
           <Footer />
         </div>

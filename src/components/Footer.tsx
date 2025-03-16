@@ -20,70 +20,77 @@ export default function Footer() {
   };
 
   return (
-    <footer className='relative'>
+    <footer className='relative w-full'>
       {/* Grid Background */}
-      <div className='absolute inset-0 grid grid-cols-12 bg-[#FF5A47]'>
+      <motion.div
+        animate={{ width: showForm ? '50%' : '100%' }}
+        className='absolute inset-0 grid grid-cols-12 bg-[#FF5A47]'
+      >
         {[...Array(12)].map((_, i) => (
           <div key={i} className='border-l border-[#FF6B5A] last:border-r' />
         ))}
-      </div>
+      </motion.div>
 
       <div className='relative z-10'>
         {/* Typography - Full Width */}
         <motion.div
-          animate={{ width: showForm ? '40%' : '100%' }}
-          className='h-full'
+          animate={{ width: showForm ? '50%' : '100%' }}
+          className='font-funnel h-full'
         >
-          <div className='grid h-full w-full grid-cols-12'>
-            {/* GET */}
-            <div className='col-span-1 col-start-1 flex items-center pl-4'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                g
-              </span>
+          <div className='flex flex-col'>
+            <div className='grid w-full grid-cols-12'>
+              {/* GET */}
+              <div className='col-span-1 col-start-1 flex items-center overflow-hidden'>
+                <span className='w-full text-[clamp(6rem,14vw,18rem)] font-bold text-white'>
+                  g
+                </span>
+              </div>
+              <div className='col-span-1 col-start-2 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  e
+                </span>
+              </div>
+              <div className='col-span-1 col-start-3 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  t
+                </span>
+              </div>
             </div>
-            <div className='col-span-1 col-start-2 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                e
-              </span>
+            <div className='grid w-full grid-cols-12'>
+              {/* QUOTE */}
+              <div className='col-span-1 col-start-7 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  q
+                </span>
+              </div>
+              <div className='col-span-1 col-start-8 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  u
+                </span>
+              </div>
+              <div className='col-span-1 col-start-9 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  o
+                </span>
+              </div>
+              <div className='col-span-1 col-start-10 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  t
+                </span>
+              </div>
+              <div className='col-span-1 col-start-11 flex items-center overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  e
+                </span>
+              </div>
             </div>
-            <div className='col-span-1 col-start-3 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                t
-              </span>
-            </div>
-
-            {/* QUOTE */}
-            <div className='col-span-1 col-start-6 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                q
-              </span>
-            </div>
-            <div className='col-span-1 col-start-7 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                u
-              </span>
-            </div>
-            <div className='col-span-1 col-start-8 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                o
-              </span>
-            </div>
-            <div className='col-span-1 col-start-9 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                t
-              </span>
-            </div>
-            <div className='col-span-1 col-start-10 flex items-center'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                e
-              </span>
-            </div>
-
-            {/* A */}
-            <div className='col-span-1 col-start-7 flex items-end pb-32'>
-              <span className='text-[clamp(6rem,15vw,12rem)] font-medium text-white'>
-                a
-              </span>
+            <div className='grid w-full grid-cols-12'>
+              {/* A */}
+              <div className='col-span-1 col-start-5 flex items-end overflow-hidden'>
+                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                  a
+                </span>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -111,7 +118,7 @@ export default function Footer() {
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            className='absolute right-0 top-0 h-full w-[60%] bg-white'
+            className='absolute right-0 top-0 h-full w-[50%] bg-white'
           >
             <div className='h-full overflow-y-auto p-12'>
               {/* Close Button */}

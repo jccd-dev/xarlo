@@ -20,105 +20,82 @@ export default function Footer() {
   };
 
   return (
-    <footer className='relative w-full'>
+    <div className='relative h-[500px] w-full'>
       {/* Grid Background */}
       <motion.div
         animate={{ width: showForm ? '50%' : '100%' }}
         className='absolute inset-0 grid grid-cols-12 bg-[#FF5A47]'
       >
         {[...Array(12)].map((_, i) => (
-          <div key={i} className='border-l border-[#FF6B5A] last:border-r' />
+          <div key={i} className='border-r border-westar-500 last:border-l-0' />
         ))}
       </motion.div>
 
-      <div className='relative z-10'>
+      <div className='relative z-10 flex h-full'>
         {/* Typography - Full Width */}
         <motion.div
           animate={{ width: showForm ? '50%' : '100%' }}
-          className='font-funnel h-full'
+          className='h-auto font-funnel'
         >
-          <div className='flex flex-col'>
-            <div className='grid w-full grid-cols-12'>
-              {/* GET */}
-              <div className='col-span-1 col-start-1 flex items-center overflow-hidden'>
-                <span className='w-full text-[clamp(6rem,14vw,18rem)] font-bold text-white'>
-                  g
-                </span>
-              </div>
-              <div className='col-span-1 col-start-2 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  e
-                </span>
-              </div>
-              <div className='col-span-1 col-start-3 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  t
-                </span>
-              </div>
+          <div className='z-10 grid h-full w-full grid-cols-12'>
+            {/* GET */}
+            <div className='flex items-center overflow-hidden'>
+              <span className='w-full text-[clamp(6rem,14vw,18rem)] font-bold leading-none text-white'>
+                g
+              </span>
             </div>
-            <div className='grid w-full grid-cols-12'>
-              {/* QUOTE */}
-              <div className='col-span-1 col-start-7 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  q
-                </span>
-              </div>
-              <div className='col-span-1 col-start-8 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  u
-                </span>
-              </div>
-              <div className='col-span-1 col-start-9 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  o
-                </span>
-              </div>
-              <div className='col-span-1 col-start-10 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  t
-                </span>
-              </div>
-              <div className='col-span-1 col-start-11 flex items-center overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  e
-                </span>
-              </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                e
+              </span>
             </div>
-            <div className='grid w-full grid-cols-12'>
-              {/* A */}
-              <div className='col-span-1 col-start-5 flex items-end overflow-hidden'>
-                <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
-                  a
-                </span>
-              </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                t
+              </span>
+            </div>
+
+            {/* A */}
+            <div className='overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                a
+              </span>
+            </div>
+
+            {/* QUOTE */}
+            <div className='flex h-full items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                q
+              </span>
+            </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                u
+              </span>
+            </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                o
+              </span>
+            </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                t
+              </span>
+            </div>
+            <div className='flex items-center overflow-hidden'>
+              <span className='text-[clamp(6rem,14vw,18rem)] font-medium text-white'>
+                e
+              </span>
             </div>
           </div>
         </motion.div>
-
-        {/* Absolute Button */}
-        {!showForm && (
-          <div className='absolute bottom-12 right-6'>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowForm(true)}
-              className='group flex h-32 w-32 items-center justify-center rounded-full bg-black text-white transition-colors hover:bg-black/90'
-            >
-              <div className='flex flex-col items-center gap-2'>
-                <span className='text-sm font-medium'>FILL OUT</span>
-                <span className='text-sm font-medium'>THE FORM</span>
-                <ArrowDownRight className='h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5' />
-              </div>
-            </motion.button>
-          </div>
-        )}
-
         {/* Form Panel */}
         {showForm && (
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            className='absolute right-0 top-0 h-full w-[50%] bg-white'
+            className='h-full w-[50%] bg-white'
           >
             <div className='h-full overflow-y-auto p-12'>
               {/* Close Button */}
@@ -271,6 +248,24 @@ export default function Footer() {
           </motion.div>
         )}
       </div>
-    </footer>
+
+      {/* Absolute Button */}
+      {!showForm && (
+        <div className='absolute bottom-12 right-6 z-30'>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setShowForm(true)}
+            className='group flex h-32 w-32 items-center justify-center rounded-full bg-black text-white transition-colors hover:bg-black/90'
+          >
+            <div className='flex flex-col items-center gap-2'>
+              <span className='text-sm font-medium'>FILL OUT</span>
+              <span className='text-sm font-medium'>THE FORM</span>
+              <ArrowDownRight className='h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5' />
+            </div>
+          </motion.button>
+        </div>
+      )}
+    </div>
   );
 }

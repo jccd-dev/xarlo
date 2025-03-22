@@ -40,7 +40,7 @@ export default function RootLayout({
             {[...Array(12)].map((_, i) => (
               <div
                 key={i}
-                className='border-l border-gray-300 bg-westar-200 last:border-r'
+                className='border-r border-gray-300 bg-westar-200 last:border-l-0'
               />
             ))}
           </div>

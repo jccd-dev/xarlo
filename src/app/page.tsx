@@ -1,10 +1,12 @@
 import Container from '@/components/Container';
+import Workstation from '@/components/works/Workstation';
 
 const Home = () => {
   return (
     <>
       <Container>
-        <div className='relative flex h-screen flex-col items-center justify-center'>
+        {/* Hero Section */}
+        <div className='relative flex min-h-screen flex-col items-center justify-center'>
           {/* Main Hero Content */}
           <div className='flex w-full flex-col items-center justify-center gap-6'>
             <div className=''>
@@ -23,19 +25,9 @@ const Home = () => {
               </h1>
             </div>
           </div>
-
-          {/* Availability Status */}
-          <div className='absolute bottom-8 left-0'>
-            <div className='flex flex-col gap-1'>
-              <span className='text-sm font-semibold text-gray-600'>
-                Freelancer Availability
-              </span>
-              <span className='text-sm font-normal text-gray-500'>
-                ⭐ Available
-              </span>
-            </div>
-          </div>
         </div>
+
+        <Workstation />
       </Container>
     </>
   );

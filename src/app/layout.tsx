@@ -34,20 +34,10 @@ export default function RootLayout({
       <body
         className={`${uncage.variable} ${anomaly.variable} ${funneldisplay.variable}`}
       >
-        <div className='relative'>
-          {/* Column Background */}
-          <div className='absolute inset-0 grid grid-cols-12'>
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className='border-r border-gray-300 bg-westar-200 last:border-l-0'
-              />
-            ))}
-          </div>
-
+        <div>
           <Navigation />
           {/* Page Content */}
-          <div className='relative z-10'>{children}</div>
+          <div>{children}</div>
           {/* Footer */}
           <Footer />
         </div>

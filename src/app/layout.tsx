@@ -38,7 +38,6 @@ export default function RootLayout({
           <Navigation />
           {/* Page Content */}
           <div>{children}</div>
-          {/* Footer */}
           <Footer />
         </div>
       </body>

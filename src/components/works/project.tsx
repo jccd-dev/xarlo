@@ -1,16 +1,11 @@
 'use client';
 import React from 'react';
-
-interface ProjectProps {
-  index: number;
-  title: string;
-  setModal: (params: { active: boolean; index: number }) => void;
-}
+import { ProjectProps } from '../../types/works';
 
 export default function Project({ index, title, setModal }: ProjectProps) {
   return (
     <div
-      className='group flex w-full cursor-pointer items-center justify-between border-t border-[#c9c9c9] px-[100px] py-[50px] transition-all duration-200 last:border-b hover:opacity-50'
+      className='group flex w-full cursor-pointer items-center justify-between border-t border-[#c9c9c9] px-10 py-10 transition-all duration-200 last:border-b hover:opacity-50'
       onMouseEnter={() => setModal({ active: true, index })}
       onMouseLeave={() => setModal({ active: false, index })}
     >

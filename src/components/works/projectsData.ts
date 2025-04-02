@@ -1,0 +1,55 @@
+import { Project } from '../../types/works';
+
+// Sample project data
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Empowering Amazon Sellers',
+    client: 'Titan Application',
+    services: 'Application',
+    year: 2024,
+    color: '#000000',
+    image: 'img1.jpg',
+    slug: 'empowering-amazon-sellers',
+  },
+  {
+    id: '3',
+    title: 'Solutions for Government Contractors',
+    client: 'Jackson Holcomb',
+    services: 'Consulting',
+    year: 2024,
+    color: '#8C8C8C',
+    image: 'img2.jpg',
+    slug: 'solutions-government-contractors',
+  },
+  {
+    id: '4',
+    title: 'Knowledge and Wisdom',
+    client: 'Nesh',
+    services: 'Application',
+    year: 2024,
+    color: '#FF4D2E',
+    image: 'img3.jpg',
+    slug: 'knowledge-and-wisdom',
+  },
+  {
+    id: '5',
+    title: 'Transparency through Technology',
+    client: 'Kayenta',
+    services: 'Application',
+    year: 2023,
+    color: '#2E86FF',
+    image: 'img4.jpg',
+    slug: 'transparency-through-technology',
+  },
+  {
+    id: '6',
+    title: 'The Future of Prosperity',
+    client: 'Etherfuse',
+    services: 'Branding / Website',
+    year: 2022,
+    color: '#45FF2E',
+    image: 'img5.jpg',
+    slug: 'future-of-prosperity',
+  },
+];

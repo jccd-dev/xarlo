@@ -1,12 +1,13 @@
 import Container from '@/components/Container';
 import Workstation from '@/components/works/Workstation';
+import Footer from '@/components/Footer';
 
 const Home = () => {
   return (
     <>
       <Container>
         {/* Hero Section */}
-        <div className='relative flex min-h-screen flex-col items-center justify-center'>
+        <div className='relative flex h-screen flex-col items-center justify-center'>
           {/* Main Hero Content */}
           <div className='flex w-full flex-col items-center justify-center gap-6'>
             <div className=''>

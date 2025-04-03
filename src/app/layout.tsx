@@ -9,9 +9,9 @@ const uncage = localFont({
   variable: '--font-uncage',
 });
 
-const anomaly = localFont({
-  src: '../../public/fonts/anomaly.woff',
-  variable: '--font-anomaly',
+const roboto = localFont({
+  src: '../../public/fonts/Roboto.ttf',
+  variable: '--font-roboto',
 });
 
 const funneldisplay = localFont({
@@ -32,12 +32,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${uncage.variable} ${anomaly.variable} ${funneldisplay.variable}`}
+        className={`${uncage.variable} ${roboto.variable} ${funneldisplay.variable}`}
       >
         <div>
           <Navigation />
           {/* Page Content */}
-          <div>{children}</div>
+          <div className='mt-16 min-h-[calc(100vh-90px-200px)]'>{children}</div>
           <Footer />
         </div>
       </body>
